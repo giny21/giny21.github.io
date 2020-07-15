@@ -4,19 +4,32 @@
 <head>
 
   <title>Realtime communication with WebRTC</title>
-
+  <style>
+    .audio-controllers{
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
 
   <h1>Realtime communication with WebRTC</h1>
 
-  <audio id="local" autoplay controls></audio><br/>
-  <audio id="remote" autoplay controls></audio><br/>
-  <button>Connect</button>
+  <div class="login-form">
+    <input type="text" id="login" placeholder="email"/>
+    <input type="password" id="password" placeholder="password"/>
+
+    <button id="connect">Connect</button>
+  </div>
+
+  <div class="audio-controllers">
+    <audio id="local" controls></audio><br/>
+    <audio id="remote" controls></audio><br/>
+
+    <button id="start">Start Transmition</button>
+  </div>
 
   <script src="main.js"></script>
-
 </body>
 
 </html>
