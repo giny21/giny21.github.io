@@ -6,7 +6,6 @@ const mediaStreamConstraints = {
   audio: true,
 };
 
-const localAudio = document.querySelector('audio#local');
 const remoteAudio = document.querySelector('audio#remote');
 
 const connect = document.querySelector('button#connect');
@@ -83,7 +82,6 @@ start.onclick = function()
 
     navigator.mediaDevices.getUserMedia(mediaStreamConstraints)
         .then(mediaStream => {
-            localAudio.srcObject = mediaStream;
             mediaStream.getTracks().forEach((track) => connection.addTrack(track, mediaStream));
         });
     let myEvent = window.attachEvent || window.addEventListener;
