@@ -1,6 +1,6 @@
 'use strict';
 
-const ws = new WebSocket("ws://localhost:8082/a3f390d88e"); //e179525539
+const ws = new WebSocket("wss://dev-api.okayplan.com/ws/a3f390d88e");
 const configuration = {'iceServers': [{ 'urls': 'stun:stun.l.google.com:19302' }]};;
 const connection = new RTCPeerConnection(configuration);
 
